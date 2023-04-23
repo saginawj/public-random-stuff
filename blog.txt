@@ -1,0 +1,71 @@
+Since the release of GPT-3 a few months ago, the pace of innovation in the AI space has been remarkable [terrifying].  It seems that each week, a new innovation shifts the perception of what this new toy [death machine] can do.
+
+Last week’s rage was the Automated Agent, with projects like AutoGPT and babyagi providing frameworks to extend and automate the capabilities of chatGPT.  I decided to take AutoGPT for a spin to understand its potential.
+
+AutoGPT as my Interior Design Agent?
+
+I asked AutoGPT to perform the role of Interior Designer.   Given a picture of my bedroom, propose a new design in the style of Rustic Chic, and create a few images based on the new style.  
+
+My agent’s start was productive- it recognized it needed to understand what I meant by ‘Rustic Chic,’ so it ran a google search, synthesized the responses, and determined the next task should be finding a website that specialized in interior design.  Looks promising!
+
+However the limitations of my new interior designer soon became apparent.  After identifying RoomSketcher as a popular home design site, its recommended course of action was to create a new account, sign in, and create few designs.   Very logical approach!  At least, for a human.  And we all know that AI will lack traditional human characteristics and capabilities for at least a few months.  
+
+Predictably, since my Agent couldn’t really understand how to Create Account on RoomSketcher, it eventually gave up and tried other means of achieving my dreams of a rustic chic bedroom.
+
+This basic exercise revealed the current limitations of AI apps, and the area I’d expect will see some of the most innovation and development over the next few months. 
+
+The future building blocks of AI apps: interfaces & plugins
+
+Human interfaces consist of norms and laws, and computer interfaces have evolved since the advent of the WWW, from CORBA and message brokers to SOAP/XML/etc. 
+
+In these early days, it’s still unclear what the AI-to-AI interfaces will look like, but these standards and protocols are clearly required for apps like my Interior Design Agent to get to work.  
+
+One obvious contributor in this space will be OpenAI, as it establishes its plug-in framework with alpha partners.  Initial OpenAI Plugin v1 specs can be found on partner sites like Klarna, which defines a “description for human” and “description for machine.”  
+
+While OpenAI has stated it expects “open standards will emerge to unify the ways in which applications expose AI-facing interface,” what happens if Google defines it’s own specs?   If history is any indication, the future of AI comms will likely be at least bifurcated (PC vs. Mac, IPhone vs. Android, etc.). 
+
+We’ve learned from web2 that aggregators like Facebook and Google can suck the value out of an ecosystem by defining standards for communication that all partners must follow.  I’ll be curious to see if early power players do the same with AI interfaces.  
+
+The AI Interface challenges every company will face
+
+It’s become obvious that essentially every organization, regardless of size or vertical, will need a strategy for coping/thriving thriving in this new AI age.  
+
+A key component of this AI strategy will involve defining the means by which the company interfaces with AI.  
+
+When companies developed their initial World Wide Web strategies 25+ years ago, they essentially just copy/pasted existing business processes and models (e.g. putting the LL Bean catalog on the www.llbean.com website, along with a phone number to place orders since using credit cards on the internet was too dangerous).  I’d expect early attempts at AI strategy will be similar, as it’s easiest to think within existing paradigms and processes.  
+
+Companies will also need to determine how to monetize these new AI Interfaces.   Will they charge annual API subscriptions?  Expose on-demand APIs to AI agents?  
+
+What about data security?  Beyond the basics of accidently publishing company PII data, how will companies combat AI hallucinations or other early-day horror stories?
+
+The Future AI Agent Workflow?
+
+With the right AI infra in place, maybe the Interior Design Agent 2.0 workflow might look something like this:
+
+I use my integrated AI Agent (aka: Google/Microsoft Searchbar) to define my goal:   create a Rustic Chic design for my bedroom with a budget of $5.  
+My agent uses an industry-recognized AI Service Registry (OpenAI Plugin Repo?) to identify AI Interior Design APIs that have had the most traffic, have been audited by the leading AI auditing firms (bots), and received the best reviews from other bots.  It finds RoomSketcher and pings the AI interface with my request.
+The Room Sketcher API and my Interior Design Agent review a few sample images and negotiate a price of $1 per image.  Three sample images are generated and sent to my desktop in a notification.   
+I select the image I like the best, hover over some of the new furniture, and click the ‘Add to Cart’ option.  My Agent then processes the order, identifying the top sellers for each item (it knows I like to shop local, so it prioritizes mom-and-pop sellers first, using the Service Registry to determine local sellers with the best prices.
+After the order is places, RoomSketcher receives an affiliate fee based on the terms defined in it’s interface.  
+
+While I wait for this possible future, it seems sites like interioai.com have already created Interior Design solutions using AI and LLM, so maybe I’ll just start there.  
+
+AI did not help me write this article… for the most part
+
+It feels like many traditionally-human work & creative products will eventually have some form of “I did this myself” disclaimer, which is sort of wild to think about.  Well I did not use AI in the creation of this article.  Though I hate picking titles, so I did use AI for that.  
+
+I built a very simple AI pipeline that uses:
+
+Langchain to ingest the blog’s text into AI-readable chunks.
+Langchain to structure the objectives to feed the AI models (in this case, “write a professional yet catchy title for the following LinkedIn blog post”)
+Text summarization Large Language Models from OpenAI, HuggingFace, and Cohere.
+
+I posted the Google Colab notebook here.  Feel free to use on your own Google Doc. 
+
+What’s next?
+
+I hesitate to make any predictions or conclusions, because the only thing I have confidence in is that I will be wildly wrong.   
+
+I do know that constant innovations from open source projects like HuggingFace and LangChain will be critical in the evolution of AI interfaces and app dev.  And with companies like Databricks open-sourcing their Large Language Models (Dolly), its great to see these powerful technologies in the hands of the masses vs. stuck in silo companies.
+
+One thing is clear:  as a company’s data becomes more valuable and differentiating than it’s services - which will be more frequently outsourced to better and more cost-efficient AI agents - it will be critical for every organiztion to define it’s AI integration strategy. 
