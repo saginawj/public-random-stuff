@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <p>Redirecting to app...</p>
+    <script>
+      // Parse the hash fragment into query params
+      const params = new URLSearchParams(window.location.hash.slice(1));
+      const qp = [];
+      for (const [k, v] of params.entries()) {
+        qp.push(`${encodeURIComponent(k)}=${encodeURIComponent(v)}`);
+      }
+      // Compose the new URL with query params
+      const url = `reimagined://auth/callback?${qp.join('&')}`;
+      // Redirect to your app
+      window.location = url;
+    </script>
+  </body>
+</html>
