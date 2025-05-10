@@ -3,20 +3,41 @@
   <head>
     <title>Redirecting...</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <p>Redirecting to app...</p>
     <script>
-      // Parse the hash fragment into query params
-      const params = new URLSearchParams(window.location.hash.slice(1));
+      function parseHashOrSearch() {
+        // Try hash first (for implicit flow)
+        let paramsString = window.location.hash.substring(1);
+        
+        // If hash is empty, try search params (for code flow)
+        if (!paramsString) {
+          paramsString = window.location.search.substring(1);
+        }
+        
+        return new URLSearchParams(paramsString);
+      }
+      
+      // Parse the URL parameters
+      const params = parseHashOrSearch();
       const qp = [];
+      
+      // Add each parameter to the redirect URL
       for (const [k, v] of params.entries()) {
         qp.push(`${encodeURIComponent(k)}=${encodeURIComponent(v)}`);
       }
-      // Compose the new URL with query params
-      const url = `reimagined://auth/callback?${qp.join('&')}`;
-      // Redirect to your app
-      window.location = url;
+      
+      // Log if there are params for debugging
+      console.log("Params found:", params.toString());
+      
+      // Compose the redirect URL
+      const redirectUrl = `reimagined://auth/callback?${qp.join("&")}`;
+      console.log("Redirecting to:", redirectUrl);
+      
+      // Redirect to the app
+      window.location.href = redirectUrl;
     </script>
   </body>
 </html>
